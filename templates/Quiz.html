@@ -1,0 +1,423 @@
+<!-------------------------------------------------------------------------------->
+<!--   Quiz webpage                                                             -->
+<!-------------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Info</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link 
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" 
+  rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+  ></script>
+</head>
+
+<body>
+
+  <div class="p-5 bg-warning text-white text-center">
+    <h1>Quiz</h1>
+    <p>A website for students to learn about AI</p>
+  </div>
+
+  <!-- navigation between webpages -->
+  <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="./Home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./Info">Info</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="">Quiz</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./ANN">ANN</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Tabs to switch between "quiz" and "results" -->
+  <nav>
+    <div class="nav nav-tabs mb-4" id="myTab" role="tablist">
+      <a class="nav-link active" 
+         id="home-tab" 
+         data-bs-toggle="tab" 
+         href="#quiz" 
+         role="tab" 
+         aria-controls="quiz" 
+         aria-selected="true">Quiz</a>
+      <a class="nav-link" 
+         id="profile-tab" 
+         data-bs-toggle="tab" 
+         href="#result" 
+         role="tab" 
+         aria-controls="results" 
+         aria-selected="false">Result</a>
+    </div>
+  </nav>
+
+  
+  <!-- quiz tab using accordian paradigm-->  
+  <div class="tab-content">
+    <div class="tab-pane fade show active" 
+         id="quiz" 
+         role="tabpanel" 
+         aria-labelledby="quiz-tab">
+           <div class="container mt-5">
+                  <h2>How much do you know?</h2>
+                  <h5>Try the following questions!</h5>
+                  <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" 
+                                type="button" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#q1" 
+                                aria-expanded="true" 
+                                aria-controls="q1">
+                          Artificial Neural Networks are an example of ......... ?
+                        </button>
+                      </h2>
+                      <div id="q1" 
+                           class="accordion-collapse collapse show" 
+                           aria-labelledby="headingOne" 
+                           data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="form-check">
+                            <input class="form-check-input" 
+                                   type="radio" 
+                                   name="q1" 
+                                   id="q1_r1" 
+                                   value="r1">
+                            <label class="form-check-label" for="q1_r1">
+                                robotics
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" 
+                                   type="radio" 
+                                   name="q1" 
+                                   id="q1_r2" 
+                                   value="r2">
+                            <label class="form-check-label" for="q1_r2">
+                                symbolic AI
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" 
+                                   type="radio" 
+                                   name="q1" 
+                                   id="q1_r3" 
+                                   value="r3">
+                            <label class="form-check-label" for="q1_r3">
+                                machine learning
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" 
+                                   type="radio" 
+                                   name="q1" 
+                                   id="q1_r4" 
+                                   value="r4">
+                            <label class="form-check-label" for="q1_r4">
+                                none of the above
+                            </label>
+                            </div> 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button" 
+                                type="button" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#q2" 
+                                aria-expanded="false" 
+                                aria-controls="q2">
+                          What part of the human body does an Artificial Neural Networks try to imitate?
+                        </button>
+                      </h2>
+                      <div id="q2" 
+                           class="accordion-collapse collapse" 
+                           aria-labelledby="headingTwo" 
+                           data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="form-check">
+                            <input class="form-check-input" 
+                                   type="radio" 
+                                   name="q2" 
+                                   id="q2_r1" 
+                                   value="r1">
+                            <label class="form-check-label" for="q2_r1">
+                                eyes
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" 
+                                   type="radio" 
+                                   name="q2" 
+                                   id="q2_r2" 
+                                   value="r2">
+                            <label class="form-check-label" for="q2_r2">
+                                nervous system
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" 
+                                   type="radio" 
+                                   name="q2" 
+                                   id="q2_r3" 
+                                   value="r3">
+                            <label class="form-check-label" for="q2_r3">
+                                heart
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" 
+                                   type="radio" 
+                                   name="q2" 
+                                   id="q2_r4" 
+                                   value="r4">
+                            <label class="form-check-label" for="q2_r4">
+                                brain
+                            </label>
+                            </div> 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button" 
+                                type="button" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#q3" 
+                                aria-expanded="false" 
+                                aria-controls="q3">
+                          What is a neuron in an Artificial Neural Network?
+                        </button>
+                      </h2>
+                      <div id="q3" 
+                           class="accordion-collapse collapse" 
+                           aria-labelledby="headingThree" 
+                           data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="form-check">
+                            <input class="form-check-input" 
+                                   type="radio" 
+                                   name="q3" 
+                                   id="q3_r1" 
+                                   value="r1">
+                            <label class="form-check-label" for="q3_r1">
+                                node which calculates output signals based on applying a mathematical function to input signals
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" 
+                                   type="radio" 
+                                   name="q3" 
+                                   id="q3_r2" 
+                                   value="r2">
+                            <label class="form-check-label" for="q3_r2">
+                                a replica of a human brain neuron
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" 
+                                   type="radio" 
+                                   name="q3" 
+                                   id="q3_r3" 
+                                   value="r3">
+                            <label class="form-check-label" for="q3_r3">
+                                a random number generator
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" 
+                                   type="radio" 
+                                   name="q3" 
+                                   id="q3_r4" 
+                                   value="r4">
+                            <label class="form-check-label" for="q3_r4">
+                                temporary data storage
+                            </label>
+                            </div> 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button" 
+                                type="button" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#q4" 
+                                aria-expanded="false" 
+                                aria-controls="q4">
+                          How do Artificial Neural Networks work?
+                        </button>
+                      </h2>
+                      <div id="q4" 
+                           class="accordion-collapse collapse" 
+                           aria-labelledby="headingFour" 
+                           data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="form-check">
+                            <input class="form-check-input" 
+                                   type="radio" 
+                                   name="q4" 
+                                   id="q4_r1" 
+                                   value="r1">
+                            <label class="form-check-label" for="q4_r1">
+                                they store lots of images and look for a match 
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" 
+                                   type="radio" 
+                                   name="q4" 
+                                   id="q4_r2" 
+                                   value="r2">
+                            <label class="form-check-label" for="q4_r2">
+                                they learn features from lots of examples, and use that learning with new examples
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" 
+                                   type="radio" 
+                                   name="q4" 
+                                   id="q4_r3" 
+                                   value="r3">
+                            <label class="form-check-label" for="q4_r3">
+                                they work in exactly the same way as the human brain                               
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" 
+                                   type="radio" 
+                                   name="q4" 
+                                   id="q4_r4" 
+                                   value="r4">
+                            <label class="form-check-label" for="q4_r4">
+                                none of the above
+                            </label>
+                            </div> 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button" 
+                                type="button" 
+                                data-bs-toggle="collapse" 
+                                data-bs-target="#q5" 
+                                aria-expanded="false" 
+                                aria-controls="q5">
+                          Is an Artificial Neural Network more efficient than the human brain?
+                        </button>
+                      </h2>
+                      <div id="q5" 
+                           class="accordion-collapse collapse" 
+                           aria-labelledby="headingFive" 
+                           data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="form-check">
+                            <input class="form-check-input" 
+                                   type="radio" 
+                                   name="q5" 
+                                   id="q5_r1" 
+                                   value="r1">
+                            <label class="form-check-label" for="q5_r1">
+                                yes
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" 
+                                   type="radio" 
+                                   name="q5" 
+                                   id="q5_r2" 
+                                   value="r2">
+                            <label class="form-check-label" for="q5_r2">
+                                no
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" 
+                                   type="radio" 
+                                   name="q5" 
+                                   id="q5_r3" 
+                                   value="r3">
+                            <label class="form-check-label" for="q5_r3">
+                                same
+                            </label>
+                            </div>
+                            <div class="form-check">
+                            <input class="form-check-input" 
+                                   type="radio" 
+                                   name="q5" 
+                                   id="q5_r4" 
+                                   value="r4">
+                            <label class="form-check-label" for="q5_r4">
+                                depends
+                            </label>
+                            </div> 
+                        </div>
+                      </div>
+                    </div>                                                                                
+
+                  </div>
+                </div>
+    </div> 
+    <!-- results tab -->              
+    <div class="tab-pane fade" 
+         id="result" 
+         role="tabpanel" 
+         aria-labelledby="result-tab">
+                  
+      <h3>&nbsp;&nbsp;Result</h3>
+
+      <div class="card">
+          <div class="card-body">
+            <p id="result_message">No result.</p>
+
+            <div class="progress mb-2">
+                <div id="result_progress" 
+                     class="progress-bar" 
+                     role="progressbar" 
+                     aria-valuenow="0" 
+                     aria-valuemin="0" 
+                     aria-valuemax="100"></div>
+            </div>
+
+            <button type="button" onclick="update()" 
+                    class="btn btn-success">Update</button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scrolling -->
+  <div class="mt-5 p-4 bg-info text-white text-center">
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <button onclick="topFunction()" 
+              class="btn btn-warning me-md-2" 
+              id="myBtn" 
+              type="button">Back to top</button>
+    </div>
+  </div>
+  <script src="/js/common.js"></script>
+
+  <!-- Quiz Javascript -->
+  <script src="/js/quiz.js"></script>
+
+  <script 
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+  ></script>
+  </body>
+
+</html>

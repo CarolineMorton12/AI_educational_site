@@ -1,0 +1,257 @@
+<!-------------------------------------------------------------------------------->
+<!--   Info webpage                                                             -->
+<!-------------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Info</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link 
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" 
+  rel="stylesheet">
+  <script 
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+  ></script>
+</head>
+
+<body>
+
+  <div class="p-5 bg-warning text-white text-center">
+    <h1>Information</h1>
+    <p>A website for students to learn about AI</p>
+  </div>
+
+  <!-- navigation between webpages -->
+  <nav class="navbar navbar-expand-sm bg-info navbar-dark">
+    <div class="container-fluid">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="./Home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="">Info</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./Quiz">Quiz</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./ANN">ANN</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- accordian paradigm-->
+  <div class="container mt-5">
+        <h2>How to build an ANN</h2>
+        <h5>Click on the arrows to learn how ANNs work</h5>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" 
+                      type="button" 
+                      data-bs-toggle="collapse" 
+                      data-bs-target="#collapseOne" 
+                      aria-expanded="true" 
+                      aria-controls="collapseOne">
+                What is AI?
+              </button>
+            </h2>
+            <div id="collapseOne" 
+                 class="accordion-collapse collapse show" 
+                 aria-labelledby="headingOne" 
+                 data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                According to Josh McCarthy, " It is <strong>the science and engineering of making intelligent 
+                machines</strong>, especially intelligent computer programs. It is related to the similar task of 
+                using computers to understand human intelligence, but <strong>AI does not have to confine itself to methods that 
+                are biologically observable.</strong>" This means that machines can "think" in their own way, and this could be 
+                helpful for us! 
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" 
+                      type="button" 
+                      data-bs-toggle="collapse" 
+                      data-bs-target="#collapseTwo" 
+                      aria-expanded="false" 
+                      aria-controls="collapseTwo">
+                Types of AI
+              </button>
+            </h2>
+            <div id="collapseTwo" 
+                 class="accordion-collapse collapse" 
+                 aria-labelledby="headingTwo" 
+                 data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                There are lots of different types of AI (see <a href="https://www.govtech.com/computing/understanding-the-four-types-of-artificial-intelligence.html">here</a> if you want to learn more), but here we will just be focusing 
+                on Machine learning, specifically classification. Machines are very good at pattern recognition! They can often 
+                see links that humans cannot - this is why they are often used to sort things. This is also the reason they are used for neural networks!
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" 
+                      type="button" 
+                      data-bs-toggle="collapse" 
+                      data-bs-target="#collapseThree" 
+                      aria-expanded="false" 
+                      aria-controls="collapseThree">
+                What is a neural network?
+              </button>
+            </h2>
+            <div id="collapseThree" 
+                 class="accordion-collapse collapse" 
+                 aria-labelledby="headingThree" 
+                 data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Neural networks learn to do something by looking for patterns in data. For example, there could be a NN that 
+                was learning to say if a picture was of a cat or dog. It would be fed a lot of data like this: <br>
+                <img src="./images/cats.png" alt="Pictures of cats" width="500" height="400">
+                <img src="./images/dogs.png" alt="Pictures of dogs" width="500" height="400"> <br>
+                It would then find patterns in the data (even experts don't know how they do it!) and eventually would be able to recognise between a cat and a dog! <br><br>
+                pro tip : The accuracy of the NN depends greatly on the data that it is being trained on. If the data is diverse the NN will be able to get a better sense of what actually it is doing, but usually this is difficult as 
+                collecting datasets is very time consuming! See <a href="https://www.codedbias.com">here</a> a documentry about a time where a NN trained with insufficient data, causing an array of problems...
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed" 
+                      type="button" 
+                      data-bs-toggle="collapse" 
+                      data-bs-target="#collapseFour" 
+                      aria-expanded="false" 
+                      aria-controls="collapseFour">
+                How the code works
+              </button>
+            </h2>
+            <div id="collapseFour" 
+                 class="accordion-collapse collapse" 
+                 aria-labelledby="headingFour" 
+                 data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+
+                <div class="accordion" id="accordionExampleA">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOneA">
+                      <button class="accordion-button" 
+                              type="button" 
+                              data-bs-toggle="collapse" 
+                              data-bs-target="#collapseOneA" 
+                              aria-expanded="true" 
+                              aria-controls="collapseOne">
+                        Forward propagation
+                      </button>
+                    </h2>
+                    <div id="collapseOneA" 
+                         class="accordion-collapse collapse show" 
+                         aria-labelledby="headingOne" 
+                         data-bs-parent="#accordionExampleA">
+                      <div class="accordion-body">
+                        This first bit of code is called forward propagation. It takes the inputs, feeds it through the ANN, 
+                        and then produces an output. <br>
+                        It seems like thats all the code you would need! But this is like any 
+                        other code - what makes ANNs special is their ability to learn from their mistakes... 
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwoA">
+                      <button class="accordion-button collapsed" 
+                              type="button" 
+                              data-bs-toggle="collapse" 
+                              data-bs-target="#collapseTwoA" 
+                              aria-expanded="false" 
+                              aria-controls="collapseTwoA">
+                        Backward propagation
+                      </button>
+                    </h2>
+                    <div id="collapseTwoA" 
+                         class="accordion-collapse collapse" 
+                         aria-labelledby="headingTwoA" 
+                         data-bs-parent="#accordionExampleA">
+                      <div class="accordion-body">
+                        This next bit of code is how that happends. It looks at what the answer should have been, 
+                        then adjusts the weights accordingly (called backward propagation). 
+                        This means it should have a better guess next time!
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThreeA">
+                      <button class="accordion-button collapsed" 
+                              type="button" 
+                              data-bs-toggle="collapse" 
+                              data-bs-target="#collapseThreeA" 
+                              aria-expanded="false" 
+                              aria-controls="collapseThreeA">
+                        Full code
+                      </button>
+                    </h2>
+                    <div id="collapseThreeA" 
+                         class="accordion-collapse collapse" 
+                         aria-labelledby="headingThreeA" 
+                         data-bs-parent="#accordionExampleA">
+                      <div class="accordion-body">
+                        Here is the full code for a NN (from scratch). It is quite complicated so don't worry if you dont understand it all!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed" 
+                      type="button" 
+                      data-bs-toggle="collapse" 
+                      data-bs-target="#collapseFive" 
+                      aria-expanded="false" 
+                      aria-controls="collapseFive">
+                Training the ANN
+              </button>
+            </h2>
+            <div id="collapseFive" 
+                 class="accordion-collapse collapse" 
+                 aria-labelledby="headingFive" 
+                 data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Now we have the code! unfortunately this is pretty useless until you train it...
+                We do this by giving the code an input, then telling it what the right answer is!
+                Why dont you give this a try on the ANN page <a href="./ANN">here.</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+  </div>
+
+  <!-- Scrolling -->
+  <div class="mt-5 p-4 bg-info text-white text-center">
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <button onclick="topFunction()" 
+              class="btn btn-warning me-md-2" 
+              id="myBtn" 
+              type="button">Back to top</button>
+    </div>
+  </div>
+  <script src="/js/common.js"></script>
+
+</body>
+
+</html>
