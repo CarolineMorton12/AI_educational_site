@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "ai-educational-site"
+version = "0.1.0"
+description = ""
+authors = ["CarolineMorton12 <cm2781@bath.ac.uk>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+flask = "^3.1.0"
+numpy = "^2.2.3"
+scipy = "^1.15.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

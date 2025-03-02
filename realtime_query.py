@@ -26,6 +26,7 @@
 
 # numpy for various mathematical actions (e.g. use of matrices)
 import numpy
+import numpy as np
 # loadtxt is used to read from file
 from numpy import loadtxt
 # access to ANN.py needed
@@ -69,7 +70,7 @@ def compress_image(input_string):
 
     # split string into list sepated by ","
     # scale and shift the inputs
-    inputs = (numpy.asfarray(input_string.split(',')) / 255.0 * 0.99) + 0.01
+    inputs = (numpy.asarray(input_string.split(','), dtype=np.float64) / 255.0 * 0.99) + 0.01
 
     # compress image from 224x224 obtained from browser to 28x28
     # as expected by MNIST-trained ANN
